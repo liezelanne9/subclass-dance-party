@@ -8,7 +8,10 @@ var PikaPika = function(top, left, timeBetweenSteps) {
   
 
   PikaPika.prototype.step = function() {
-
     makeDancer.prototype.step.call(this);
-    this.$node.toggle();
+    
+  }
+
+  PikaPika.prototype.lineUp = function () {
+    this.$node.addClass("loading")
   }

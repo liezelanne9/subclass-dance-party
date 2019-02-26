@@ -35,20 +35,13 @@ $(document).ready(function() {
 
     var lineup = $(this).data('line-up-function-name');
 
-    // get the maker function for the kind of dancer we're supposed to make
     var lineUpFunction = window[lineup];
 
-    // make a dancer with a random position
     for (let i = 0; i < window.dancers.length; i++) {
-      window.dancers[i]
+      window.dancers[i].lineUp(window.dancers[i]);
     }
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
-    $('body').append(dancer.$node);
-    window.dancers.push(dancer);
+    // $('body').append(dancer.$node);
+    // window.dancers.push(dancer);
   });
 });
 

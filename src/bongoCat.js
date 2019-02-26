@@ -12,3 +12,7 @@ var BongoCat = function(top, left, timeBetweenSteps) {
     makeDancer.prototype.step.call(this);
 
   }
+
+  BongoCat.prototype.lineUp = function () {
+    this.$node.addClass("jump");
+  }
