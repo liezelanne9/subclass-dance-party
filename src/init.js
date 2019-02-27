@@ -28,6 +28,7 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    $('element').attr('id', 'value');
     window.dancers.push(dancer);
   });
 
@@ -43,5 +44,15 @@ $(document).ready(function() {
     // $('body').append(dancer.$node);
     // window.dancers.push(dancer);
   });
+
+  $('body').on('mouseover', '.pika-pika', function() {
+    $(this).css('content', 'url(img/RyanReynolds.gif)')
+    $(this).css('height', '100px');
+  });
+
+  $('body').on('mouseout', '.pika-pika', function() {
+    $(this).css('content', 'url(img/pikapika.png)')
+  });
+
 });
 
